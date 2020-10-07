@@ -4,7 +4,6 @@ pipeline {
     stages {
       stage('TF Init&Plan') {
         steps {
-        sh 'terraform --version'
           sh 'terraform init'
           sh 'terraform plan'
         }      
