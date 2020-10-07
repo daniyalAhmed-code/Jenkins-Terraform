@@ -11,7 +11,7 @@ pipeline {
             secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
         ]]) {
             sh 'AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} AWS_DEFAULT_REGION=us-east-2'
-
+            sh 'terraform plan -input=false -var-file=config/dev.tfvars'
         }
         
         }      
@@ -19,7 +19,7 @@ pipeline {
 
     stage('TF Apply') {
         steps {
-          sh 'terraform apply -input=false'
+          sh 'terraform apply -input=false -var-file=config/dev.tfvars'
         }
       }
     } 
