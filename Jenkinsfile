@@ -6,12 +6,6 @@ pipeline {
     }
 
     stages {
-      stage('fetch_latest_code') {
-        steps {
-          git credentialsId: 'daniyalAhmed-code', url: 'https://github.com/daniyalAhmed-code/Jenkins-Terraform'
-        }
-      }
-
       stage('TF Init&Plan') {
         steps {
           sh 'terraform init'
