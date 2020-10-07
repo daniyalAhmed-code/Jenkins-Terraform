@@ -11,19 +11,11 @@
             accessKeyVariable: 'AWS_ACCESS_KEY_ID',
             secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
         ]]) {
-          sh 'terraform init'
-          sh 'terraform plan -out'
+          sh 'terraform init -input=false'
+          sh 'terraform plan -out=tfplan =input=false'
         }      
       }
       }
-      stage('Approval') {
-        steps {
-          script {
-            def userInput = input(id: 'confirm', message: 'Apply Terraform?', parameters: [ [$class: 'BooleanParameterDefinition', defaultValue: false, description: 'Apply terraform', name: 'confirm'] ])
-          }
-        }
-      }
-
       stage('TF Apply') {
         steps {
           sh 'terraform apply -input=false'
