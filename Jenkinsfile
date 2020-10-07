@@ -4,15 +4,8 @@ pipeline {
     stages {
       stage('TF Init&Plan') {
         steps {
-          sh 'terraform init'
-          sh 'terraform plan'
+          sh 'which terraform'
         }      
-      }
-
-    stage('TF Apply') {
-        steps {
-          sh 'terraform apply -input=false'
-        }
       }
     } 
   }
