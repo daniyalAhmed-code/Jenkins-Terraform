@@ -12,7 +12,7 @@
             secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
         ]]) {
           sh 'terraform init'
-          sh 'terraform plan'
+          sh 'terraform plan -out'
         }      
       }
       }
