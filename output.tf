@@ -3,5 +3,5 @@ output "vpc-subnet" {
 }
 
 output "ec2-ip" {
-  value = module.ec2-instance.private-ip
+  value = module.ec2-instance.ec2-instance-id
 }
