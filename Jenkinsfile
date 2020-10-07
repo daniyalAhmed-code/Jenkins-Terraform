@@ -15,7 +15,7 @@
           sh 'terraform plan'
         }      
       }
-
+      }
       stage('Approval') {
         steps {
           script {
@@ -31,4 +31,4 @@
       }
     } 
   }
-  }
+  
