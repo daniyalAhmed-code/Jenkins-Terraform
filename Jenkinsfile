@@ -1,5 +1,5 @@
 pipeline {
-    agent {label 'ec2-terra'}  
+    agent {label 'master'}  
     tools {terraform "Terraform"}
     stages {
       stage('TF Init&Plan') {
