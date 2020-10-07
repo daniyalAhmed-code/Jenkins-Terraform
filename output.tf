@@ -3,5 +3,5 @@ output "vpc-subnet" {
 }
 
 output "ec2-ip" {
-  value = "In ec2"
+  value = module.ec2-instance.private-ip
 }
