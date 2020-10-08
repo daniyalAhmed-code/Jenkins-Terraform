@@ -1,13 +1,7 @@
 pipeline {
-    agent {label 'ssh-slave'}  
+    agent {label 'fleet-slave'}  
     tools {terraform "Terraform"}
     stages {
-      stage('fetch_latest_code') {
-        steps {
-          git url: 'https://github.com/daniyalAhmed-code/Jenkins-Declarative/tree/develop'
-        }
-      }
-
       stage('TF Init&Plan') {
         steps {
         withCredentials([[
