@@ -13,5 +13,4 @@ output "instance-security-group-id" {
 output "private-subnets-id" {
   value = "${aws_subnet.public-subnets[0].id}"
 }
-}
 
