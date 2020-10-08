@@ -7,7 +7,7 @@ variable "AMIS"{
 }
 variable "AWS_INSTANCE_TYPE" {}
 variable "KEYPAIR_NAME" {}
-variable "private-subnets-id" {}
+variable "public-subnets-id" {}
 variable "vpc-id" {}
 variable "instance-security-group-id" {}
 variable "NAME" {
