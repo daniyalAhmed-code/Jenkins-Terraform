@@ -11,7 +11,7 @@ pipeline {
             secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
         ]]) {
             sh 'terraform init'
-            sh 'terraform plan -input=false -var-file=config/dev.tfvars'
+            sh 'terraform plan -input=false -var-file=config/dev.tfvars -lock=false'
         }
         
         }      
@@ -25,7 +25,7 @@ pipeline {
             accessKeyVariable: 'AWS_ACCESS_KEY_ID',
             secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
         ]]) {
-          sh 'terraform apply -input=false -auto-approve -var-file=config/dev.tfvars'
+          sh 'terraform apply -input=false -auto-approve -var-file=config/dev.tfvars -lock=false'
         }
       }
     } 
