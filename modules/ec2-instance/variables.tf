@@ -11,6 +11,6 @@ variable "private-subnets-id" {}
 variable "vpc-id" {}
 variable "instance-security-group-id" {}
 variable "NAME" {
-  default = "dani-ec2"
+  default = "daniyal-ec2"
 }
 

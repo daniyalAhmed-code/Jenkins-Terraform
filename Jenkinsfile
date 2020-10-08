@@ -1,5 +1,5 @@
 pipeline {
-    agent {label 'fleet-slave'}  
+    agent {label 'ssh-slave'}  
     tools {terraform "Terraform"}
     stages {
       stage('TF Init&Plan') {

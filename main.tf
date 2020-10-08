@@ -13,5 +13,8 @@ module "ec2-instance" {
   KEYPAIR_NAME = var.KEYPAIR_NAME
   AWS_REGION     = var.AWS_REGION
   AWS_INSTANCE_TYPE = var.AWS_INSTANCE_TYPE
+
+
+
 }
 
